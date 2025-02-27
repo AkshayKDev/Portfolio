@@ -1,9 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Code, Laptop, Phone, Zap } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  CircleArrowDown,
+  Code,
+  Laptop,
+  Phone,
+  Zap,
+} from "lucide-react";
 import Link from "next/link";
 import { Particles } from "@/components/particles";
 import Image from "next/image";
 import computerImage from "@/assets/memoji-computer.png";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import { people } from "@/data/hero";
 
 export default function Hero() {
   return (
@@ -32,8 +41,8 @@ export default function Hero() {
               </span>
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl lg:text-2xl">
-              I craft clean, modern, and high-performing web/mobile solutions
-              tailored to your needs.
+              I design modern, fast, and optimized web/mobile solutions tailored
+              to your needs.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -42,8 +51,8 @@ export default function Hero() {
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <Link href="#projects">
-                Book Call
+              <Link href="#projects" className="flex items-center">
+                <span>Book Call</span>
                 <Phone className="ml-1 h-5 w-5" />
               </Link>
             </Button>
@@ -53,7 +62,10 @@ export default function Hero() {
               variant="outline"
               className="bg-transparent border-2 border-blue-600 text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
-              <Link href="#contact">View my Work</Link>
+              <Link href="#contact">
+                <span>View my Work</span>
+                <BriefcaseBusiness />
+              </Link>
             </Button>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mt-2">
@@ -77,9 +89,15 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        <div className="flex justify-center mt-10 items-center">
+          <AnimatedTooltip items={people} />
+        </div>
       </div>
-      <div className="absolute bottom-5 left-5 right-5 flex justify-between items-center text-gray-600 text-sm">
-        <span className="animate-bounce">Scroll to explore</span>
+      <div className="absolute bottom-5 left-5 right-5 flex justify-end items-center text-gray-600 text-sm">
+        <div className="flex items-center animate-bounce">
+          <span>Scroll to explore</span>
+          <CircleArrowDown className="ml-1" />
+        </div>
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
