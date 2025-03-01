@@ -20,7 +20,11 @@ export default function Hero() {
       <Particles className="z-0" />
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center">
-          <Image src={computerImage} className="size-[100px]" alt="" />
+          <Image
+            src={computerImage}
+            className="size-[100px]"
+            alt="Computer Image"
+          />
           <div className="bg-white border text-black border-gray-300 shadow-md px-4 py-1.5 inline-flex items-center gap-2 mb-2 rounded-full">
             <div className="relative">
               <div className="absolute bg-green-500 size-2.5 rounded-full opacity-75 animate-ping" />
@@ -89,19 +93,17 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-10 items-center">
+        <div className="flex flex-row items-center justify-center mt-10 w-full">
           <AnimatedTooltip items={people} />
         </div>
       </div>
+
       <div className="absolute bottom-5 left-5 right-5 flex justify-end items-center text-gray-600 text-sm">
         <div className="flex items-center animate-bounce">
           <span>Scroll to explore</span>
           <CircleArrowDown className="ml-1" />
         </div>
       </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
     </section>
   );
 }
