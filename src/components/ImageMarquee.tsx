@@ -55,6 +55,10 @@ const ImageMarquee = () => {
           Skills & Technologies
         </h2>
         <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full mb-4"></div>
+        <p className="text-gray-600 max-w-2xl mx-auto px-8 lg:px-4">
+          Expertise across various tools and technologies that power modern
+          development
+        </p>
       </div>
 
       {/* Enhanced edge fade effect */}
@@ -86,7 +90,6 @@ const ImageMarquee = () => {
                     transition: { type: "spring", stiffness: 400, damping: 10 },
                   }}
                 >
-                  <div className="absolute inset-0 bg-white rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center p-4">
                     <Image
                       src={displaySkill.img}
